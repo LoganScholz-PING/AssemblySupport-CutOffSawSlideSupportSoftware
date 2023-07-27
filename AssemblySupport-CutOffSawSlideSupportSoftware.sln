@@ -3,18 +3,54 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblySupport-CutOffSawSlideSupportSoftware", "AssemblySupport-CutOffSawSlideSupportSoftware.csproj", "{761E407B-AFF3-4E89-8D5E-5710F86DA249}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblySupport-CutOffSawSlideSupportSoftware", "AssemblySupport-CutOffSawSlideSupportSoftware.csproj", "{761E407B-AFF3-4E89-8D5E-5710F86DA249}"
+EndProject
+Project("{B7DD6F7E-DEF8-4E67-B5B7-07EF123DB6F0}") = "CutOffSawSupportSoftwareInstaller", "CutOffSawSupportSoftwareInstaller\CutOffSawSupportSoftwareInstaller.wixproj", "{7CF75786-AC0D-4D52-AC76-01BAECD133DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Debug|x64.Build.0 = Debug|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Debug|x86.Build.0 = Debug|Any CPU
 		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Release|ARM64.Build.0 = Release|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Release|x64.ActiveCfg = Release|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Release|x64.Build.0 = Release|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Release|x86.ActiveCfg = Release|Any CPU
+		{761E407B-AFF3-4E89-8D5E-5710F86DA249}.Release|x86.Build.0 = Release|Any CPU
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Debug|Any CPU.Build.0 = Debug|x64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Debug|ARM64.Build.0 = Debug|ARM64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Debug|x64.ActiveCfg = Debug|x64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Debug|x64.Build.0 = Debug|x64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Debug|x86.ActiveCfg = Debug|x86
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Debug|x86.Build.0 = Debug|x86
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Release|Any CPU.ActiveCfg = Release|x64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Release|Any CPU.Build.0 = Release|x64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Release|ARM64.ActiveCfg = Release|ARM64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Release|ARM64.Build.0 = Release|ARM64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Release|x64.ActiveCfg = Release|x64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Release|x64.Build.0 = Release|x64
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Release|x86.ActiveCfg = Release|x86
+		{7CF75786-AC0D-4D52-AC76-01BAECD133DC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,60 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+	<Package Name="Cut Off Saw Slide Support Software" Language="1033" Version="!(bind.FileVersion.StartupExecutable)" Manufacturer="PING, Inc." UpgradeCode="{97DA28BD-D626-4818-820E-1D6326973390}" InstallerVersion="201">
+		<MajorUpgrade DowngradeErrorMessage="A newer version of Cut Off Saw Slide Support Software is already installed." />
+
+		<!--Imbeds the cabinet file in the .msi-->
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="Cut Off Saw Slide Support Software" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="Runtimes" />
+		</Feature>
+	</Package>
+
+	<Fragment>
+		<StandardDirectory Id="DesktopFolder" />
+		<StandardDirectory Id="ProgramMenuFolder" />
+		<StandardDirectory Id="ProgramFiles6432Folder">
+			<Directory Id="MyCompanyFolder" Name="Ping">
+				<Directory Id="INSTALLFOLDER" Name="Cut Off Saw Slide Support">
+					<Directory Id="runtimes" Name="runtimes">
+						<Directory Id="runtimesWin" Name="win">
+							<Directory Id="runtimesWinLib" Name="lib">
+								<Directory Id="runtimesWinNet70" Name="net7.0">
+								</Directory>
+							</Directory>
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+		</StandardDirectory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Id="ProjectName" Guid="{92B8B789-7D3F-4B35-B4C5-5C32FED848F7}">
+				<File Id="StartupExecutable" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)AssemblySupport-CutOffSawSlideSupportSoftware.exe" DiskId="1" KeyPath="yes">
+					<Shortcut Id="DesktopShortcut" Advertise="yes" Directory="DesktopFolder" Name="Cut Off Saw Slide Support Software" WorkingDirectory="INSTALLFOLDER" Description="Cut Off Saw Slide Support Software">
+					</Shortcut>
+					<Shortcut Id="StartMenu" Advertise="yes" Directory="ProgramMenuFolder" Name="Cut Off Saw Slide Support Software" WorkingDirectory="INSTALLFOLDER">
+					</Shortcut>
+				</File>
+				<File Id="___var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir_AssemblySupport_CutOffSawSlideSupportSoftware.deps.json" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)AssemblySupport-CutOffSawSlideSupportSoftware.deps.json" />
+				<File Id="___var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir_AssemblySupport_CutOffSawSlideSupportSoftware.dll" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)AssemblySupport-CutOffSawSlideSupportSoftware.dll" />
+				<File Id="___var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir_AssemblySupport_CutOffSawSlideSupportSoftware.pdb" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)AssemblySupport-CutOffSawSlideSupportSoftware.pdb" />
+				<File Id="___var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir_AssemblySupport_CutOffSawSlideSupportSoftware.runtimeconfig.json" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)AssemblySupport-CutOffSawSlideSupportSoftware.runtimeconfig.json" />
+				<File Id="___var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir_System.CodeDom.dll" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)System.CodeDom.dll" />
+				<File Id="___var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir_System.IO.Ports.dll" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)System.IO.Ports.dll" />
+				<File Id="___var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir_System.Management.dll" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)System.Management.dll" />
+			</Component>
+		</ComponentGroup>
+
+		<ComponentGroup Id="Runtimes" Directory="runtimesWinNet70">
+			<Component Id="additionalComponents" Guid="{B5CFEB3E-874D-4B24-81A8-1D44A4FAF62B}">
+				<File Id="runtimes_win_lib_net7.0_System.IO.Ports.dll" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)runtimes/win/lib/net7.0/System.IO.Ports.dll" />
+				<File Id="runtimes_win_lib_net7.0_System.Management.dll" Source="$(var.AssemblySupport_CutOffSawSlideSupportSoftware.TargetDir)runtimes/win/lib/net7.0/System.Management.dll" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
