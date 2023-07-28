@@ -1,3 +1,5 @@
+using System.Security.Policy;
+
 namespace AssemblySupport_CutOffSawSlideSupportSoftware
 {
     public partial class MainForm : Form
@@ -7,6 +9,12 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
             InitializeComponent();
             initSerialComm();
             initTimers();
+            initVisualComponents();
+        }
+
+        private void initVisualComponents()
+        {
+            pbCUT_INDICATOR.Image = null;
             updateSerialConnectionParams();
         }
 

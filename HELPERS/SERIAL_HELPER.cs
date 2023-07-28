@@ -88,6 +88,7 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
                         proc.Start();
 
                         outputToLog($"[INFO] Auto-Connected to {_sp.PortName}");
+                        //updateSerialConnectionParams();
                     }
                     catch (Exception ex)
                     {
@@ -153,6 +154,7 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
                 _sp.Open();
                 initTimers();
                 _monitor_running = true;
+                updateSerialConnectionParams();
             }
             catch (Exception)
             {
@@ -188,7 +190,7 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
         public void updateSerialConnectionParams()
         {
             lblSERIAL_COMPORT.Text = _sp.PortName.ToString();
-            lblSERIAL_CONNECTED.Text = _sp.IsOpen ? "CONNECTED" : "DISCONNECTED";
+            lblSERIAL_CONNECTED.Text = _monitor_running ? "CONNECTED" : "DISCONNECTED";
             lblSERIAL_SPEED.Text = _sp.BaudRate.ToString();
         }
     }

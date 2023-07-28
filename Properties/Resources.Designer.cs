@@ -59,5 +59,15 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CUT_INDICATOR {
+            get {
+                object obj = ResourceManager.GetObject("CUT_INDICATOR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

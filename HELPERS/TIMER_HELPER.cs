@@ -12,6 +12,7 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
         private static System.Timers.Timer timerIO;
         private static System.Timers.Timer timerPosition;
         private static System.Timers.Timer timerCheckSerialQueue;
+        private static System.Timers.Timer timerCutIndicator;
 
         public void initTimers()
         {
@@ -31,7 +32,18 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
                 timerCheckSerialQueue.Elapsed += timerCheckSerialQueue_Tick;
                 timerCheckSerialQueue.AutoReset = false;
                 timerCheckSerialQueue.Enabled = true;
+
+                timerCutIndicator = new System.Timers.Timer(2000);
+                timerCutIndicator.Elapsed += timerCutIndicator_Tick;
+                timerCutIndicator.AutoReset = false;
+                timerCutIndicator.Enabled = false;
             }
+        }
+
+        public void timerCutIndicator_Tick(Object source, ElapsedEventArgs e)
+        {
+            pbCUT_INDICATOR.Image = null;
+            timerCutIndicator.Stop();
         }
 
         string PRI1 = "PR I1";
@@ -95,6 +107,7 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
         string R1 = "R1";
         string SOL = "SOL";
         string POS = "POS";
+        string CUT = "CUT";
         string CALVAR = "CALVAR";
         public void timerCheckSerialQueue_Tick(Object source, ElapsedEventArgs e)
         {
@@ -138,6 +151,11 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
                     else if (s.Contains(POS))
                     {
                         lblPR_POS.Text = s.Substring(s.LastIndexOf('=') + 1);
+                    }
+                    else if (s.ToUpper().Contains(CUT))
+                    {
+                        pbCUT_INDICATOR.Image = AssemblySupport_CutOffSawSlideSupportSoftware.Properties.Resources.CUT_INDICATOR;
+                        timerCutIndicator.Start();
                     }
                     else if (s.Contains(CALVAR))
                     {
@@ -189,6 +207,12 @@ namespace AssemblySupport_CutOffSawSlideSupportSoftware
             {
                 timerCheckSerialQueue.Stop();
                 timerCheckSerialQueue.Dispose();
+            }
+
+            if(timerCutIndicator != null)
+            {
+                timerCutIndicator.Stop();
+                timerCutIndicator.Dispose();
             }
         }
     }

@@ -40,6 +40,7 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             tcMAIN = new TabControl();
             tpMAIN = new TabPage();
+            pbCUT_INDICATOR = new PictureBox();
             groupBox3 = new GroupBox();
             lblPR_I4 = new Label();
             lblPR_I3 = new Label();
@@ -137,6 +138,7 @@
             menuStrip1.SuspendLayout();
             tcMAIN.SuspendLayout();
             tpMAIN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbCUT_INDICATOR).BeginInit();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -182,27 +184,27 @@
             // optionsToolStripMenuItem
             // 
             optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            optionsToolStripMenuItem.Size = new Size(180, 22);
+            optionsToolStripMenuItem.Size = new Size(116, 22);
             optionsToolStripMenuItem.Text = "&Options";
             // 
             // timersToolStripMenuItem
             // 
             timersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { stopAllTimersToolStripMenuItem, startAllTimersToolStripMenuItem });
             timersToolStripMenuItem.Name = "timersToolStripMenuItem";
-            timersToolStripMenuItem.Size = new Size(180, 22);
+            timersToolStripMenuItem.Size = new Size(116, 22);
             timersToolStripMenuItem.Text = "Timers";
             // 
             // stopAllTimersToolStripMenuItem
             // 
             stopAllTimersToolStripMenuItem.Name = "stopAllTimersToolStripMenuItem";
-            stopAllTimersToolStripMenuItem.Size = new Size(180, 22);
+            stopAllTimersToolStripMenuItem.Size = new Size(153, 22);
             stopAllTimersToolStripMenuItem.Text = "Stop All Timers";
             stopAllTimersToolStripMenuItem.Click += stopAllTimersToolStripMenuItem_Click;
             // 
             // startAllTimersToolStripMenuItem
             // 
             startAllTimersToolStripMenuItem.Name = "startAllTimersToolStripMenuItem";
-            startAllTimersToolStripMenuItem.Size = new Size(180, 22);
+            startAllTimersToolStripMenuItem.Size = new Size(153, 22);
             startAllTimersToolStripMenuItem.Text = "Start All Timers";
             startAllTimersToolStripMenuItem.Click += startAllTimersToolStripMenuItem_Click;
             // 
@@ -234,6 +236,7 @@
             // tpMAIN
             // 
             tpMAIN.BackColor = Color.FromArgb(172, 172, 172);
+            tpMAIN.Controls.Add(pbCUT_INDICATOR);
             tpMAIN.Controls.Add(groupBox3);
             tpMAIN.Controls.Add(groupBox2);
             tpMAIN.Controls.Add(groupBox1);
@@ -243,6 +246,14 @@
             tpMAIN.Size = new Size(569, 765);
             tpMAIN.TabIndex = 0;
             tpMAIN.Text = "MAIN";
+            // 
+            // pbCUT_INDICATOR
+            // 
+            pbCUT_INDICATOR.Location = new Point(6, 466);
+            pbCUT_INDICATOR.Name = "pbCUT_INDICATOR";
+            pbCUT_INDICATOR.Size = new Size(557, 54);
+            pbCUT_INDICATOR.TabIndex = 3;
+            pbCUT_INDICATOR.TabStop = false;
             // 
             // groupBox3
             // 
@@ -1259,7 +1270,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1609, 848);
+            ClientSize = new Size(1609, 841);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lbOUTGOINGSERIAL);
@@ -1274,6 +1285,7 @@
             menuStrip1.PerformLayout();
             tcMAIN.ResumeLayout(false);
             tpMAIN.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbCUT_INDICATOR).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -1405,5 +1417,6 @@
         private ToolStripMenuItem timersToolStripMenuItem;
         private ToolStripMenuItem stopAllTimersToolStripMenuItem;
         private ToolStripMenuItem startAllTimersToolStripMenuItem;
+        private PictureBox pbCUT_INDICATOR;
     }
 }
