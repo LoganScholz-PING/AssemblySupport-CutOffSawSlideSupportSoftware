@@ -1277,8 +1277,10 @@
             Controls.Add(lbINCOMINGSERIAL);
             Controls.Add(tcMAIN);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cut-Off Saw Slide Support Software v1.0";
             FormClosing += MainForm_FormClosing;
             menuStrip1.ResumeLayout(false);
